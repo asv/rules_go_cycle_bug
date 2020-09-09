@@ -1,0 +1,6 @@
+load("@bazel_gazelle//:def.bzl", "gazelle")
+
+# gazelle:prefix github.com/asv/rules_go_cycle_bug
+# gazelle:go_naming_convention_external go_default_library
+# gazelle:go_naming_convention go_default_library
+gazelle(name = "gazelle")

@@ -1,0 +1,15 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "pubsub.go",
+        "stan.go",
+    ],
+    importpath = "github.com/asv/rules_go_cycle_bug/pkg/pubsub",
+    visibility = ["//visibility:public"],
+    deps = [
+        "@com_github_golang_protobuf//proto:go_default_library",
+        "@com_github_nats_io_stan_go//:go_default_library",
+    ],
+)
